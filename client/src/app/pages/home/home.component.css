@@ -1,0 +1,52 @@
+/* ===== Hero section with clean gradient background ===== */
+.hero {
+  position: relative;
+  padding: 8rem 0 4rem;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(34,211,238,.12), transparent 60%),
+    radial-gradient(900px 450px at 110% 0%, rgba(99,102,241,.10), transparent 60%);
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 6rem 0 3rem; }
+}
+
+/* ===== Hero card styling ===== */
+.hero .card {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 920px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.35);
+  animation: floatIn 0.5s ease both;
+}
+
+/* Headline with accent underline */
+.hero h1 {
+  margin-bottom: 0.75rem;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin-top: 0.6rem;
+  background: linear-gradient(90deg, var(--brand), transparent);
+  border-radius: 3px;
+  opacity: 0.8;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+@keyframes floatIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}

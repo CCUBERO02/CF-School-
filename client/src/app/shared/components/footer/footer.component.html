@@ -1,0 +1,8 @@
+<footer>
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+    <div>© {{ currentYear }} {{ 'footer.rights' | translate }}</div>
+    <div>
+      <a [attr.href]="'mailto:' + email" class="btn outline">{{ 'footer.email_me' | translate }}</a>
+    </div>
+  </div>
+</footer>

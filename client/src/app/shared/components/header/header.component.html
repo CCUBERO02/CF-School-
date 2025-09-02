@@ -1,0 +1,23 @@
+<header class="site">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; padding:.9rem 0;">
+    <a routerLink="/" class="brand" aria-label="CF Solutions — Home" style="display:flex; gap:.6rem; align-items:center;">
+      <img
+        src="assets/logo/CFDARKLOGO.png"
+        alt="CF Solutions logo"
+        width="52" height="52"
+        decoding="async" loading="eager" />
+    </a>
+
+    <nav style="display:flex; gap:1rem; align-items:center;">
+      <a routerLink="/services">{{ 'nav.services' | translate }}</a>
+      <a routerLink="/contact">{{ 'nav.contact' | translate }}</a>
+      <a class="btn" routerLink="/contact">{{ 'cta.get_quote' | translate }}</a>
+
+      <!-- Language toggle -->
+      <div class="card" style="padding:.25rem .5rem; display:flex; gap:.5rem; align-items:center;">
+        <button class="btn outline" (click)="setLang('en')" style="padding:.35rem .6rem;">EN</button>
+        <button class="btn outline" (click)="setLang('es')" style="padding:.35rem .6rem;">ES</button>
+      </div>
+    </nav>
+  </div>
+</header>

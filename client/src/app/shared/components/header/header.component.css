@@ -1,0 +1,11 @@
+header a[routerLink].active { font-weight:700; }
+.header-logo {
+  width: 64px;
+  height: auto;
+  transition: width 0.25s ease, transform 0.25s ease;
+}
+
+.site.shrink .header-logo {
+  width: 40px;
+  transform: translateY(2px);
+}

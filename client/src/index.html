@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CF Solutions — Full-Stack Software Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0f17">
+  <meta name="description" content="CF Solutions: Full-stack software development for startups and enterprises in Costa Rica and beyond.">
+  <!-- Optional font, safe to keep or remove -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<style>
+  #splash {
+    position:fixed; inset:0; display:grid; place-items:center;
+    background:#0b0f17; z-index:9999;
+  }
+  #splash img{ width:64px; height:auto; animation: softPulse 2.2s ease-in-out infinite; }
+</style>
+<div id="splash"><img src="assets/logo/CFDARKLOGO.png" alt="CF Solutions loading"></div>
+<app-root></app-root>
+<script>
+  // remove splash when Angular bootstraps
+  window.addEventListener('load', () => {
+    const el = document.getElementById('splash'); if(el) el.remove();
+  });
+</script>
+
+<body>
+  <app-root></app-root>
+</body>
+</html>

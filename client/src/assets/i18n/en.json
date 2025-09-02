@@ -1,0 +1,82 @@
+{
+  "nav": { "services": "Services", "contact": "Contact" },
+  "cta": { "get_quote": "Get a quote" },
+
+  "home": {
+    "hero": {
+      "title": "Build your product with confidence.",
+      "subtitle": "I help founders and teams turn ideas into reliable, fast web apps. Clear plans, quick iterations, and production-ready code.",
+      "cta_start": "Start a project",
+      "cta_offer": "See what I offer"
+    },
+    "badges": {
+      "fast": "Fast delivery",
+      "comm": "Clear communication",
+      "scalable": "Scalable architecture"
+    },
+    "cols": {
+      "get": {
+        "title": "What you get",
+        "li1": "Simple, modern UI your customers understand",
+        "li2": "Backends that scale as you grow",
+        "li3": "Analytics and contact flows that convert"
+      },
+      "work": {
+        "title": "How I work",
+        "li1": "Short discovery → clear scope & pricing",
+        "li2": "Weekly progress with demos",
+        "li3": "Deployment & documentation"
+      },
+      "tech": {
+        "title": "Tech that lasts",
+        "li1": "Angular front-ends with design systems",
+        "li2": "Node/Express APIs with typed validation",
+        "li3": "CI/CD, monitoring, secure configs"
+      }
+    },
+    "capabilities": {
+      "title": "Selected capabilities",
+      "web": "Web Apps",
+      "web_sub": "Dashboards, portals, internal tools",
+      "integrations": "Integrations",
+      "integrations_sub": "Payments, auth, email, 3rd-party APIs",
+      "performance": "Performance",
+      "performance_sub": "Lighthouse, a11y, Core Web Vitals",
+      "data": "Data",
+      "data_sub": "Postgres, caching, background jobs"
+    }
+  },
+
+  "services": {
+    "core_title": "Core Services",
+    "discovery": { "title": "Discovery & Scope", "desc": "We define what matters, estimate, and plan milestones so you always know what’s next." },
+    "fullstack": { "title": "Full-Stack Delivery", "desc": "Angular UI + Node/Express APIs with solid data models, auth, and testing." },
+    "launch": { "title": "Launch & Growth", "desc": "Deployments, analytics, error tracking, and performance improvements after launch." },
+    "tech_title": "Technical Highlights",
+    "tech": { "zod": "Typed validation (Zod)", "helmet": "Secure headers (Helmet)", "ratelimit": "Rate limiting", "smtp": "SMTP / transactional email" }
+  },
+
+  "contact": {
+    "title": "Let’s build something great",
+    "subtitle": "Share a few details. I’ll get back within 1 business day.",
+    "name": "Name",
+    "name_ph": "Your name",
+    "name_err": "Name is required.",
+    "email": "Email",
+    "email_ph": "you@example.com",
+    "email_err": "Valid email required.",
+    "company": "Company (optional)",
+    "company_ph": "Company name",
+    "message": "Message",
+    "message_ph": "What do you need built? Scope, timeline, budget…",
+    "message_err": "Please share a bit more detail.",
+    "send": "Send",
+    "sending": "Sending…",
+    "thanks": "Thanks! I’ll be in touch."
+  },
+
+  "footer": {
+    "rights": "CF Solutions. All rights reserved.",
+    "email_me": "Email me"
+  }
+}

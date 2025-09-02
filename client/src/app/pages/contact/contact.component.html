@@ -1,0 +1,37 @@
+<h2 style="margin:1rem 0;">{{ 'contact.title' | translate }}</h2>
+<p style="color:var(--muted); margin-bottom:1rem;">{{ 'contact.subtitle' | translate }}</p>
+
+<form (ngSubmit)="submit()" [formGroup]="form" class="card" style="max-width:720px;">
+  <div class="form-row">
+    <div>
+      <label for="name">{{ 'contact.name' | translate }}</label>
+      <input id="name" formControlName="name" [placeholder]="'contact.name_ph' | translate" />
+      <small class="error" *ngIf="form.controls.name.touched && form.controls.name.invalid">{{ 'contact.name_err' | translate }}</small>
+    </div>
+    <div>
+      <label for="email">{{ 'contact.email' | translate }}</label>
+      <input id="email" type="email" formControlName="email" [placeholder]="'contact.email_ph' | translate" />
+      <small class="error" *ngIf="form.controls.email.touched && form.controls.email.invalid">{{ 'contact.email_err' | translate }}</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="company">{{ 'contact.company' | translate }}</label>
+    <input id="company" formControlName="company" [placeholder]="'contact.company_ph' | translate" />
+  </div>
+
+  <div>
+    <label for="message">{{ 'contact.message' | translate }}</label>
+    <textarea id="message" rows="6" formControlName="message" [placeholder]="'contact.message_ph' | translate"></textarea>
+    <small class="error" *ngIf="form.controls.message.touched && form.controls.message.invalid">{{ 'contact.message_err' | translate }}</small>
+  </div>
+
+  <!-- honeypot -->
+  <input type="text" formControlName="website" autocomplete="off" tabindex="-1" style="position:absolute; left:-9999px; opacity:0; height:0;" />
+
+  <div style="display:flex; gap:.75rem; align-items:center;">
+    <button class="btn" [disabled]="sending" type="submit">{{ sending ? ('contact.sending' | translate) : ('contact.send' | translate) }}</button>
+    <span *ngIf="done" style="color:var(--ok);">{{ 'contact.thanks' | translate }}</span>
+    <span *ngIf="errorMsg" style="color:var(--error);">{{ errorMsg }}</span>
+  </div>
+</form>

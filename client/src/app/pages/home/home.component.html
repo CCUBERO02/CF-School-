@@ -1,0 +1,61 @@
+<section class="hero">
+  <div class="container">
+    <div class="card" style="padding:2rem;">
+      <div class="hero" style="display:flex; justify-content:center; align-items:center; height:80vh;">
+    <img src="assets/logo/CFDARKLOGO.png"
+         alt="CF Solutions"
+         style="max-width:480px; width:80%; height:auto;">
+    </div>
+      
+      <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+        <a class="btn" routerLink="/contact">{{ 'home.hero.cta_start' | translate }}</a>
+        <a class="btn outline" routerLink="/services">{{ 'home.hero.cta_offer' | translate }}</a>
+      </div>
+
+      <div style="display:flex; gap:1rem; margin-top:1.25rem; flex-wrap:wrap; color:var(--muted);">
+        <span class="card" style="padding:.5rem .75rem;">{{ 'home.badges.fast' | translate }}</span>
+        <span class="card" style="padding:.5rem .75rem;">{{ 'home.badges.comm' | translate }}</span>
+        <span class="card" style="padding:.5rem .75rem;">{{ 'home.badges.scalable' | translate }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>{{ 'home.cols.get.title' | translate }}</h3>
+      <ul class="list-check">
+        <li>{{ 'home.cols.get.li1' | translate }}</li>
+        <li>{{ 'home.cols.get.li2' | translate }}</li>
+        <li>{{ 'home.cols.get.li3' | translate }}</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>{{ 'home.cols.work.title' | translate }}</h3>
+      <ul class="list-check">
+        <li>{{ 'home.cols.work.li1' | translate }}</li>
+        <li>{{ 'home.cols.work.li2' | translate }}</li>
+        <li>{{ 'home.cols.work.li3' | translate }}</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>{{ 'home.cols.tech.title' | translate }}</h3>
+      <ul class="list-check">
+        <li>{{ 'home.cols.tech.li1' | translate }}</li>
+        <li>{{ 'home.cols.tech.li2' | translate }}</li>
+        <li>{{ 'home.cols.tech.li3' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>{{ 'home.capabilities.title' | translate }}</h2>
+  <div class="grid grid-4">
+    <div class="card"><strong>{{ 'home.capabilities.web' | translate }}</strong><br><span style="color:var(--muted)">{{ 'home.capabilities.web_sub' | translate }}</span></div>
+    <div class="card"><strong>{{ 'home.capabilities.integrations' | translate }}</strong><br><span style="color:var(--muted)">{{ 'home.capabilities.integrations_sub' | translate }}</span></div>
+    <div class="card"><strong>{{ 'home.capabilities.performance' | translate }}</strong><br><span style="color:var(--muted)">{{ 'home.capabilities.performance_sub' | translate }}</span></div>
+    <div class="card"><strong>{{ 'home.capabilities.data' | translate }}</strong><br><span style="color:var(--muted)">{{ 'home.capabilities.data_sub' | translate }}</span></div>
+  </div>
+</section>

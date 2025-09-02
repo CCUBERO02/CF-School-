@@ -1,0 +1,82 @@
+{
+  "nav": { "services": "Servicios", "contact": "Contacto" },
+  "cta": { "get_quote": "Solicitar cotización" },
+
+  "home": {
+    "hero": {
+      "title": "Construye tu producto con confianza.",
+      "subtitle": "Ayudo a emprendedores y equipos a convertir ideas en aplicaciones web confiables y rápidas. Planes claros, iteraciones ágiles y código listo para producción.",
+      "cta_start": "Iniciar un proyecto",
+      "cta_offer": "Ver lo que ofrezco"
+    },
+    "badges": {
+      "fast": "Entrega rápida",
+      "comm": "Comunicación clara",
+      "scalable": "Arquitectura escalable"
+    },
+    "cols": {
+      "get": {
+        "title": "Lo que obtienes",
+        "li1": "Interfaces modernas y simples que tus clientes entienden",
+        "li2": "Backends que escalan cuando creces",
+        "li3": "Analítica y flujos de contacto que convierten"
+      },
+      "work": {
+        "title": "Cómo trabajo",
+        "li1": "Descubrimiento breve → alcance y precio claros",
+        "li2": "Avances semanales con demos",
+        "li3": "Despliegue y documentación"
+      },
+      "tech": {
+        "title": "Tecnología que perdura",
+        "li1": "Front-ends en Angular con sistemas de diseño",
+        "li2": "APIs Node/Express con validación tipada",
+        "li3": "CI/CD, monitoreo y configuraciones seguras"
+      }
+    },
+    "capabilities": {
+      "title": "Capacidades destacadas",
+      "web": "Aplicaciones Web",
+      "web_sub": "Tableros, portales, herramientas internas",
+      "integrations": "Integraciones",
+      "integrations_sub": "Pagos, autenticación, email, APIs de terceros",
+      "performance": "Rendimiento",
+      "performance_sub": "Lighthouse, accesibilidad, Core Web Vitals",
+      "data": "Datos",
+      "data_sub": "Postgres, caché, trabajos en segundo plano"
+    }
+  },
+
+  "services": {
+    "core_title": "Servicios principales",
+    "discovery": { "title": "Descubrimiento y alcance", "desc": "Definimos lo importante, estimamos y planificamos hitos para que siempre sepas qué sigue." },
+    "fullstack": { "title": "Entrega Full-Stack", "desc": "UI en Angular + APIs en Node/Express con modelos de datos, autenticación y pruebas." },
+    "launch": { "title": "Lanzamiento y crecimiento", "desc": "Despliegues, analítica, seguimiento de errores y mejoras de rendimiento tras el lanzamiento." },
+    "tech_title": "Aspectos técnicos",
+    "tech": { "zod": "Validación tipada (Zod)", "helmet": "Cabeceras seguras (Helmet)", "ratelimit": "Limitación de tasa", "smtp": "SMTP / email transaccional" }
+  },
+
+  "contact": {
+    "title": "Construyamos algo grande",
+    "subtitle": "Compárteme algunos detalles. Responderé en 1 día hábil.",
+    "name": "Nombre",
+    "name_ph": "Tu nombre",
+    "name_err": "El nombre es obligatorio.",
+    "email": "Correo",
+    "email_ph": "tucorreo@ejemplo.com",
+    "email_err": "Correo válido requerido.",
+    "company": "Empresa (opcional)",
+    "company_ph": "Nombre de la empresa",
+    "message": "Mensaje",
+    "message_ph": "¿Qué necesitas construir? Alcance, tiempo, presupuesto…",
+    "message_err": "Comparte un poco más de detalle.",
+    "send": "Enviar",
+    "sending": "Enviando…",
+    "thanks": "¡Gracias! Me pondré en contacto."
+  },
+
+  "footer": {
+    "rights": "CF Solutions. Todos los derechos reservados.",
+    "email_me": "Escríbeme"
+  }
+}
