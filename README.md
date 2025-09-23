@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CF Solutions — Marketing Site (Angular + Node.js)
 
 This mono-repo contains an Angular marketing site and a Node.js API that sends contact emails.
@@ -43,3 +44,6 @@ Use any SMTP provider. For Gmail, create an App Password. For higher deliverabil
 - Add reCAPTCHA v3 if spam increases.
 - Add tests (Jasmine/Karma for Angular; Vitest/Jest for server).
 - Containerize with Docker, or one-click deploy to Render/Railway.
+=======
+# CFSolutions-WebPage
+>>>>>>> bc3c85c1 (Initial commit)
