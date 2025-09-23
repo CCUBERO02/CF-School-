@@ -1,61 +1,116 @@
+<!-- HERO: diseño distinto (dos columnas: texto + imagen) -->
 <section class="hero">
   <div class="container">
     <div class="card" style="padding:2rem;">
-      <div class="hero" style="display:flex; justify-content:center; align-items:center; height:80vh;">
-    <img src="assets/logo/CFDARKLOGO.png"
-         alt="CF Solutions"
-         style="max-width:480px; width:80%; height:auto;">
-    </div>
-      
-      <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
-        <a class="btn" routerLink="/contact">{{ 'home.hero.cta_start' | translate }}</a>
-        <a class="btn outline" routerLink="/services">{{ 'home.hero.cta_offer' | translate }}</a>
-      </div>
+      <div class="grid" style="display:grid; grid-template-columns: 1.1fr .9fr; gap:1.5rem; align-items:center;">
+        <!-- Lado izquierdo: texto y CTA -->
+        <div>
+          <h1 style="margin:0 0 .5rem 0;">Adiestramiento de perros que <u>sí</u> funciona</h1>
+          <p style="color:var(--muted); font-size:1.1rem; line-height:1.6;">
+            Programas personalizados de obediencia, socialización y modificación de conducta. 
+            <strong>Primera valoración gratis en la GAM</strong>.
+          </p>
+          <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+            <a class="btn" routerLink="/contact">Agenda tu valoración</a>
+            <a class="btn outline" routerLink="/services">Ver servicios</a>
+          </div>
 
-      <div style="display:flex; gap:1rem; margin-top:1.25rem; flex-wrap:wrap; color:var(--muted);">
-        <span class="card" style="padding:.5rem .75rem;">{{ 'home.badges.fast' | translate }}</span>
-        <span class="card" style="padding:.5rem .75rem;">{{ 'home.badges.comm' | translate }}</span>
-        <span class="card" style="padding:.5rem .75rem;">{{ 'home.badges.scalable' | translate }}</span>
+          <!-- Badges en línea -->
+          <div style="display:flex; gap:.5rem; margin-top:1rem; flex-wrap:wrap;">
+            <span class="badge">🐾 Todas las razas</span>
+            <span class="badge">✅ Metodología positiva</span>
+            <span class="badge">📍 A domicilio en la GAM</span>
+          </div>
+        </div>
+
+        <!-- Lado derecho: imagen/branding -->
+        <div style="display:flex; justify-content:center; align-items:center;">
+          <div class="card" style="padding:.5rem; border-radius:16px;">
+            <img
+              src="assets/logo/EscuelaCaninaCF.png"
+              alt="Escuela Canina CF — Adiestramiento de perros"
+              style="max-width:520px; width:100%; height:auto; border-radius:12px; object-fit:cover;"
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SERVICIOS PRINCIPALES: tres columnas -->
 <section class="container">
   <div class="grid grid-3">
     <div class="card">
-      <h3>{{ 'home.cols.get.title' | translate }}</h3>
+      <h3>Obediencia básica</h3>
       <ul class="list-check">
-        <li>{{ 'home.cols.get.li1' | translate }}</li>
-        <li>{{ 'home.cols.get.li2' | translate }}</li>
-        <li>{{ 'home.cols.get.li3' | translate }}</li>
+        <li>Sentado, quieto y llamado confiable</li>
+        <li>Paseo sin jalonear</li>
+        <li>Rutinas de autocontrol en casa</li>
       </ul>
     </div>
     <div class="card">
-      <h3>{{ 'home.cols.work.title' | translate }}</h3>
+      <h3>Modificación de conducta</h3>
       <ul class="list-check">
-        <li>{{ 'home.cols.work.li1' | translate }}</li>
-        <li>{{ 'home.cols.work.li2' | translate }}</li>
-        <li>{{ 'home.cols.work.li3' | translate }}</li>
+        <li>Ansiedad por separación</li>
+        <li>Reactividad y ladridos excesivos</li>
+        <li>Destructividad y hábitos no deseados</li>
       </ul>
     </div>
     <div class="card">
-      <h3>{{ 'home.cols.tech.title' | translate }}</h3>
+      <h3>Socialización & cachorros</h3>
       <ul class="list-check">
-        <li>{{ 'home.cols.tech.li1' | translate }}</li>
-        <li>{{ 'home.cols.tech.li2' | translate }}</li>
-        <li>{{ 'home.cols.tech.li3' | translate }}</li>
+        <li>Entornos controlados y seguros</li>
+        <li>Refuerzo de buenos hábitos</li>
+        <li>Guía práctica para la familia</li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- DIFERENCIADORES (look diferente a CF Solutions): cuatro tarjetas compactas -->
 <section class="container">
-  <h2>{{ 'home.capabilities.title' | translate }}</h2>
+  <h2>¿Por qué elegir Escuela Canina CF?</h2>
   <div class="grid grid-4">
-    <div class="card"><strong>{{ 'home.capabilities.web' | translate }}</strong><br><span style="color:var(--muted)">{{ 'home.capabilities.web_sub' | translate }}</span></div>
-    <div class="card"><strong>{{ 'home.capabilities.integrations' | translate }}</strong><br><span style="color:var(--muted)">{{ 'home.capabilities.integrations_sub' | translate }}</span></div>
-    <div class="card"><strong>{{ 'home.capabilities.performance' | translate }}</strong><br><span style="color:var(--muted)">{{ 'home.capabilities.performance_sub' | translate }}</span></div>
-    <div class="card"><strong>{{ 'home.capabilities.data' | translate }}</strong><br><span style="color:var(--muted)">{{ 'home.capabilities.data_sub' | translate }}</span></div>
+    <div class="card">
+      <strong>A domicilio en la GAM</strong><br>
+      <span style="color:var(--muted)">Comodidad y enfoque personalizado</span>
+    </div>
+    <div class="card">
+      <strong>Planes a medida</strong><br>
+      <span style="color:var(--muted)">Según edad, raza y temperamento</span>
+    </div>
+    <div class="card">
+      <strong>Seguimiento cercano</strong><br>
+      <span style="color:var(--muted)">Materiales y soporte por WhatsApp</span>
+    </div>
+    <div class="card">
+      <strong>Resultados medibles</strong><br>
+      <span style="color:var(--muted)">Objetivos claros desde la semana 1</span>
+    </div>
+  </div>
+</section>
+
+<!-- NUEVO BLOQUE: “Cómo trabajamos” (pasos claros) -->
+<section class="container">
+  <div class="card" style="padding:1.25rem;">
+    <h2 style="margin-top:0;">Cómo trabajamos</h2>
+    <div class="grid" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem;">
+      <div class="card" style="padding:1rem;">
+        <strong>1) Valoración</strong>
+        <p style="color:var(--muted); margin:.5rem 0 0 0;">Diagnóstico de conducta y objetivos. Gratis en la GAM.</p>
+      </div>
+      <div class="card" style="padding:1rem;">
+        <strong>2) Plan a medida</strong>
+        <p style="color:var(--muted); margin:.5rem 0 0 0;">Sesiones y tareas según el perfil de tu perro y tu rutina.</p>
+      </div>
+      <div class="card" style="padding:1rem;">
+        <strong>3) Acompañamiento</strong>
+        <p style="color:var(--muted); margin:.5rem 0 0 0;">Seguimiento continuo y ajustes hasta lograr resultados.</p>
+      </div>
+    </div>
+    <div style="margin-top:1rem;">
+      <a class="btn" routerLink="/contact">Quiero mi valoración</a>
+    </div>
   </div>
 </section>

@@ -1,11 +1,86 @@
-header a[routerLink].active { font-weight:700; }
+/* Header — Escuela Canina CF (look distinto, mantiene paleta y logo) */
+:host { display:block; }
+
+/* Barra superior con blur y línea de borde */
+.site{
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+/* Franja sutil con el color de acento */
+.site::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0;
+  height:3px;
+  background: var(--accent);
+  opacity:.9;
+  border-radius: 0 0 6px 6px;
+}
+
+/* Link activo (con subrayado animado en acento) */
+header a[routerLink]{
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: .25rem 0;
+  transition: color .2s ease;
+}
+
+header a[routerLink]::after{
+  content:"";
+  position:absolute;
+  left: 0; bottom: -4px;
+  height: 2px; width: 0%;
+  background: var(--accent);
+  transition: width .25s ease;
+  border-radius: 2px;
+}
+
+header a[routerLink]:hover::after{
+  width: 100%;
+}
+
+header a[routerLink].active{
+  font-weight: 700;
+  color: var(--primary);
+}
+
+header a[routerLink].active::after{
+  width: 100%;
+}
+
+/* Logo con transición suave */
 .header-logo {
   width: 64px;
   height: auto;
-  transition: width 0.25s ease, transform 0.25s ease;
+  transition: width 0.25s ease, transform 0.25s ease, filter .25s ease;
 }
 
+.header-logo:hover{
+  transform: translateY(-1px);
+  filter: drop-shadow(0 2px 6px rgba(2,6,23,.12));
+}
+
+/* Estado compacto al hacer scroll */
 .site.shrink .header-logo {
   width: 40px;
   transform: translateY(2px);
+}
+
+/* Botones dentro del header (si los hay) */
+.site .btn{
+  border-radius: 999px;
+  padding: .45rem .9rem;
+  font-weight: 700;
+}
+
+/* Accesibilidad: menos animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; }
 }

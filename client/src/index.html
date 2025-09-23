@@ -1,34 +1,61 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>CF Solutions — Full-Stack Software Development</title>
+  <title>Escuela Canina CF — Adiestramiento de perros</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0f17">
-  <meta name="description" content="CF Solutions: Full-stack software development for startups and enterprises in Costa Rica and beyond.">
-  <!-- Optional font, safe to keep or remove -->
+  <meta name="description" content="Adiestramiento de perros en Costa Rica: obediencia básica/avanzada, modificación de conducta y socialización. Valoración gratis en la GAM.">
+  <meta name="theme-color" content="#0E7490">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Escuela Canina CF — Adiestramiento de perros">
+  <meta property="og:description" content="Obediencia, socialización y modificación de conducta. Valoración gratis en la GAM.">
+  <meta property="og:image" content="assets/logo/EscuelaCaninaCF.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Optional font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    :root{ --primary:#0E7490; }
+    /* Splash while Angular bootstraps */
+    #splash{
+      position:fixed; inset:0; display:grid; place-items:center;
+      background:#0b0f17; z-index:9999;
+    }
+    #splash img{
+      width:68px; height:auto; animation:softPulse 2.2s ease-in-out infinite;
+      border-radius:12px;
+    }
+    @keyframes softPulse{
+      0%,100%{ transform:scale(1); filter:drop-shadow(0 0 0 rgba(14,116,144,0)); }
+      50%{ transform:scale(1.04); filter:drop-shadow(0 6px 18px rgba(14,116,144,.35)); }
+    }
+    @media (prefers-color-scheme: light){
+      #splash{ background:#f8fafc; }
+    }
+  </style>
 </head>
-<style>
-  #splash {
-    position:fixed; inset:0; display:grid; place-items:center;
-    background:#0b0f17; z-index:9999;
-  }
-  #splash img{ width:64px; height:auto; animation: softPulse 2.2s ease-in-out infinite; }
-</style>
-<div id="splash"><img src="assets/logo/CFDARKLOGO.png" alt="CF Solutions loading"></div>
-<app-root></app-root>
-<script>
-  // remove splash when Angular bootstraps
-  window.addEventListener('load', () => {
-    const el = document.getElementById('splash'); if(el) el.remove();
-  });
-</script>
 
 <body>
+  <!-- Lightweight splash -->
+  <div id="splash">
+    <img src="assets/logo/EscuelaCaninaCF.png" alt="Escuela Canina CF — Cargando">
+  </div>
+
   <app-root></app-root>
+
+  <script>
+    // Remove splash after page load (Angular will hydrate app-root)
+    window.addEventListener('load', function(){
+      const el = document.getElementById('splash');
+      if(el) el.remove();
+    });
+  </script>
 </body>
 </html>
