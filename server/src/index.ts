@@ -11,7 +11,26 @@ const app = express();
 app.set('trust proxy', 1);
 app.use(helmet());
 app.use(express.json());
-app.use(cors({ origin: config.allowedOrigin, credentials: false }));
+
+/** CORS: permite varios orígenes (coma-separados en ALLOWED_ORIGIN) */
+const allowed = (config.allowedOrigin || '')
+  .split(',')
+  .map(s => s.trim())
+  .filter(Boolean);
+
+const corsOptions: cors.CorsOptions = {
+  origin: (origin, cb) => {
+    // Permitir requests sin header Origin (curl, monitores, SSR)
+    if (!origin) return cb(null, true);
+    return cb(null, allowed.includes(origin));
+  },
+  // si no compartes cookies/autenticación cross-site, déjalo en false
+  credentials: false,
+};
+
+// Aplica CORS (y preflight explícito por si alguna librería hace OPTIONS)
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 const limiter = rateLimit({
   windowMs: 60 * 1000,
@@ -26,4 +45,5 @@ app.use('/api/contact', contactRouter);
 
 app.listen(config.port, () => {
   console.log(`API running on http://localhost:${config.port}`);
+  console.log('CORS allowed origins:', allowed);
 });
